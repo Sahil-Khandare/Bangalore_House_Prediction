@@ -1,63 +1,150 @@
 # Bangalore House Price Prediction
 
-## Overview
+A Machine Learning web application that predicts house prices in Bangalore based on property features such as area, number of bedrooms (BHK), number of bathrooms, and location.
 
-This project predicts house prices in Bangalore using machine learning.
-The model takes features such as **location, square footage, number of bedrooms (BHK), and bathrooms** to estimate property prices.
+## Project Overview
 
----
+This project uses a Linear Regression model trained on the Bangalore House Price dataset to estimate property prices. The model is integrated with a Flask backend and a responsive web interface built using HTML, CSS, and JavaScript.
 
-## Model Details
-
-* **Algorithm:** Linear Regression (Scikit-learn)
-* **Problem Type:** Regression
-* **Goal:** Predict house prices based on input features
-
----
-
-## Technologies Used
-
-* Python
-* Pandas, NumPy
-* Scikit-learn
-* Matplotlib, Seaborn
-
----
+The application was successfully deployed on AWS EC2 using Nginx as a reverse proxy.
 
 ## Features
 
-* Data cleaning and preprocessing
-* Handling missing values
+* Predict Bangalore house prices instantly
+* Select from multiple Bangalore locations
+* User-friendly web interface
+* Flask REST API backend
+* Machine Learning model trained using Scikit-learn
+* AWS EC2 deployment with Nginx
+
+## Tech Stack
+
+### Machine Learning
+
+* Python
+* NumPy
+* Pandas
+* Scikit-learn
+
+### Backend
+
+* Flask
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+* jQuery
+
+### Deployment
+
+* AWS EC2
+* Nginx
+* Ubuntu Linux
+
+## Project Structure
+
+```
+BHP/
+│
+├── client/
+│   ├── app.html
+│   ├── app.css
+│   └── app.js
+│
+├── model/
+│   ├── BHP.ipynb
+│
+├── server/
+│   ├── artifacts/
+│   ├── server.py
+│   └── util.py
+│
+└── README.md
+```
+
+## Machine Learning Workflow
+
+1. Data Cleaning and Preprocessing
+2. Feature Engineering
+3. Outlier Removal
+4. Model Training using Linear Regression
+5. Model Evaluation
+6. Model Serialization using Pickle
+7. Flask API Integration
+8. AWS Deployment
+
+## API Endpoints
+
+### Get Locations
+
+```
+GET /get_location_names
+```
+
+Returns the list of supported Bangalore locations.
+
+### Predict Price
+
+```
+POST /predict_home_price
+```
+
+Parameters:
+
+* total_sqft
+* location
+* bhk
+* bath
+
+Returns the estimated house price.
+
+## Sample Prediction
+
+Input:
+
+* Area: 1000 sq.ft
+* BHK: 2
+* Bath: 2
+* Location: 1st Block Jayanagar
+
+Output:
+
+```
+Estimated Price: 205.38 Lakh
+```
+
+## Deployment
+
+The application was deployed on:
+
+* AWS EC2
+* Ubuntu Server
+* Nginx Reverse Proxy
+* Flask Backend
+
+## Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+
+* Data preprocessing
 * Feature engineering
-* Outlier detection and removal
-* Model training and evaluation
-* Model saving using **pickle**
+* Machine learning model development
+* REST API creation using Flask
+* Frontend and backend integration
+* AWS cloud deployment
+* Nginx server configuration
 
----
+## Future Improvements
 
-## Input Features
+* Add authentication
+* Improve UI/UX
+* Support real-time market data
+* Deploy on Vercel/Render for easier scalability
 
-* Location
-* Total Square Feet
-* BHK (Bedrooms)
-* Bathrooms
+## Author
 
----
+Sahil Khandare
 
-## Output
-
-The model predicts the **estimated house price** based on the given inputs.
-
----
-
-## Model File
-
-* `bengaluru_house_prices_model.pickle`
-
----
-
-## Conclusion
-
-This project demonstrates how machine learning can be applied to solve real-world problems like **real estate price prediction**.
-
-
+Engineering Student | Machine Learning Enthusiast | Python Developer
