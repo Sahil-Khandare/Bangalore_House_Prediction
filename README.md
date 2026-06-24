@@ -124,6 +124,14 @@ The application was deployed on:
 * Nginx Reverse Proxy
 * Flask Backend
 
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/Homepage.jpeg)
+
+### Live Application Deployed on AWS EC2 with Successful Price Prediction
+![Deployed Application with Successful Prediction](screenshots/sucessfull_predicted_result.jpeg)
+
 ## Learning Outcomes
 
 Through this project, I gained hands-on experience in:
